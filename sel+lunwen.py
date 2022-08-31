@@ -7,10 +7,10 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from webdriver_manager.chrome import ChromeDriverManager
 
 url = "http://123.56.65.248:8080/index"
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get(url=url)
 
 time.sleep(3)
